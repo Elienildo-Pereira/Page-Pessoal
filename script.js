@@ -31,14 +31,14 @@ ativacaoMenu()
 function sobreMim(){
     const experiencia = document.querySelectorAll('.experiencia_content div');
     const botao = document.querySelectorAll('.experiencia_content ul li')
-    const Educação = document.querySelectorAll('.educação_content div');
-    const botaoEducação = document.querySelectorAll('.educação_content ul li')
+    const educação = document.querySelectorAll('.educação_content div');
+    const botaoeducação = document.querySelectorAll('.educação_content ul li')
 
 
     experiencia[0].classList.add('ativo')
     botao[0].classList.add('ativo')
-    Educação[0].classList.add('ativo')
-    botaoEducação[0].classList.add('ativo')
+    educação[0].classList.add('ativo')
+    botaoeducação[0].classList.add('ativo')
 
     function slideShow(index){
         experiencia.forEach((divisao)=>{
@@ -52,14 +52,14 @@ function sobreMim(){
     }
 
         function slideShow2(index){
-        Educação.forEach((divisao)=>{
+        educação.forEach((divisao)=>{
             divisao.classList.remove('ativo');
         });
-        botaoEducação.forEach((item)=>{
+        botaoeducação.forEach((item)=>{
             item.classList.remove('ativo')
         });
-        Educação[index].classList.add('ativo')
-        botaoEducação[index].classList.add('ativo')
+        educação[index].classList.add('ativo')
+        botaoeducação[index].classList.add('ativo')
     }
 
     botao.forEach((event,index)=>{
@@ -68,7 +68,7 @@ function sobreMim(){
         });
     });
 
-    botaoEducação.forEach((div, index)=>{
+    botaoeducação.forEach((div, index)=>{
         div.addEventListener('click', ()=>{
             slideShow2(index)
         })
